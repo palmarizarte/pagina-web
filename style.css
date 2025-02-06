@@ -1,18 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'montserrat';
 }
-body{
+
+body {
     background-color: #100919;
+    color: #EFEBFA;
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     background-color: #100919;
+    z-index: 1000;
 }
-.menu{
+
+.menu {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
@@ -20,44 +25,52 @@ header{
     justify-content: space-between;
     padding: 1rem 2rem;
 }
-/*LOGO*/
-.logo{
+
+/* LOGO */
+.logo {
     z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
-.logo img{
+
+.logo img {
     width: 3rem;
     border-radius: 50%;
 }
-.logo span{
-    color:#EFEBFA;
+
+.logo span {
+    color: #EFEBFA;
     font-weight: bold;
     font-size: 1.5rem;
 }
-/*ITEMS*/
-.list{
-    color:#D6D0E0;
+
+/* ITEMS */
+.list {
+    color: #D6D0E0;
     list-style: none;
     display: flex;
     gap: 2.5rem;
 }
-.list li a{
-    color:#D6D0E0;
+
+.list li a {
+    color: #D6D0E0;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 350;
 }
-.list li a:hover{
-    color: white ;
+
+.list li a:hover {
+    color: white;
 }
-/*BOTÓN*/
-.btn{
+
+/* BOTÓN */
+.btn {
     display: none;
 }
-.btn button{
+
+.btn button {
     width: 1.8rem;
     height: 2rem;
     background-color: transparent;
@@ -69,71 +82,145 @@ header{
     justify-content: center;
     cursor: pointer;
 }
-.btn button > div{
+
+.btn button > div {
     background-color: white;
     width: 100%;
     height: 1.5px;
     transform-origin: left;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
-.btn.btn-toggle button div:first-child{
+
+.btn.btn-toggle button div:first-child {
     transform: rotate(45deg);
 }
-.btn.btn-toggle button div:nth-child(2){
+
+.btn.btn-toggle button div:nth-child(2) {
     opacity: 0;
 }
-.btn.btn-toggle button div:last-child{
+
+.btn.btn-toggle button div:last-child {
     transform: rotate(-45deg);
 }
-@media (max-width: 680px){
-    header{
+
+/* MAIN */
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem 2rem; /* Ajuste para el header fijo */
+}
+
+main .info {
+    width: 50vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .info span {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+main .info h2 {
+    font-size: 28px;
+    margin-top: 1.5rem;
+    color: #ffa600; /* Color destacado para títulos */
+}
+
+main .info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+main .info ul {
+    margin-left: 2rem;
+    list-style-type: square;
+}
+
+main .info ul li {
+    margin-bottom: 0.5rem;
+}
+
+main .info a {
+    color: #ffa600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main .info a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: #ffa600;
+    color: #100919;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+footer .social-media a {
+    color:  #100919;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    color: #ffffff;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 860px) {
+    header {
         height: 100%;
         background-color: transparent;
     }
-    .menu{
+
+    .menu {
         background-color: #100919;
     }
-    .btn{
+
+    .btn {
         display: block;
     }
-    .nav{
+
+    .nav {
         overflow: hidden;
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
-        background-color: rgb(255, 136, 0);
+        background-color: #ffa600;
     }
-    .list{
+
+    .list {
         flex-direction: column;
         padding-top: 100px;
         width: 0;
         transition: all 0.5s ease;
     }
-    .list.list-toggle{
+
+    .list.list-toggle {
         width: 250px;
         margin-left: 35px;
     }
-}
-/*Main*/
-main{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+    main .info {
+        width: 80vw; /* Ajuste para pantallas pequeñas */
+    }
 }
-main .info{
-    width: 50vw;
-    color: white;
-    display: flex;
-    margin: 20px;
-    gap: 15px;
-    display: flex;
-    flex-direction: column;
-}
-main .info span{
-    font-size: 35px; 
-    font-weight: 700;
-}
+

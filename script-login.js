@@ -15,4 +15,6 @@
      registroForm.style.display = 'none'; // Oculta el formulario de registro
      loginForm.style.display = 'block'; // Muestra el formulario de inicio de sesión
  });
+
+ 
  
