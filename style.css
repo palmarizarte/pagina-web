@@ -41,7 +41,7 @@ header {
 }
 
 .logo span {
-    color: #EFEBFA;
+    color:#ffa600;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -111,6 +111,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 6rem 2rem 2rem; /* Ajuste para el header fijo */
+    
 }
 
 main .info {
@@ -165,6 +166,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    z-index: 10; /*Asegura que el footer esté por encima de otros elementos*/
 }
 
 footer .footer-content {
@@ -184,6 +186,7 @@ footer .social-media a:hover {
 }
 
 /* RESPONSIVIDAD */
+    /*Ajustes para el menú desplegable*/
 @media (max-width: 860px) {
     header {
         height: 100%;
@@ -204,7 +207,7 @@ footer .social-media a:hover {
         top: 0;
         left: 0;
         height: 100%;
-        background-color: #ffa600;
+        background-color: #06010c;
     }
 
     .list {
