@@ -14,3 +14,11 @@ navLinks.forEach(link => {
         btnMenu.classList.remove("btn-toggle");
     });
 });
+
+document.addEventListener("click", (e) => {
+    // Verificar si el clic fue fuera del menú y del botón
+    if (!list.contains(e.target) && !btnMenu.contains(e.target)) {
+        list.classList.remove("list-toggle");
+        btnMenu.classList.remove("btn-toggle");
+    }
+});
