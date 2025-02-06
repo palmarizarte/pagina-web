@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso de Cuento</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Volver al inicio</a>
+    </header>
+    <main>
+        <h1>Finalistas del Primer Concurso de Cuento Palmarino</h1>
+        <ul class="cuento-lista">
+            <li><a href="cuento1.html">1. Título del Cuento 1</a></li>
+            <li><a href="cuento2.html">2. Título del Cuento 2</a></li>
+            <li><a href="cuento3.html">3. Título del Cuento 3</a></li>
+            <!-- Agrega los 14 cuentos en esta lista -->
+        </ul>
+    </main>
+</body>
+</html>
